@@ -147,7 +147,7 @@ if st.session_state.show_delete_confirmation:
         st.session_state.show_delete_confirmation = False
 
 # Main chat interface
-st.markdown("# 🎓 StudyBuddy AI")
+st.markdown("# 🎓 StudyBuddy Bot 😎")
 
 # Ensure current_chat_id is always set
 if st.session_state.current_chat_id is not None:
@@ -162,7 +162,7 @@ if st.session_state.current_chat_id is not None:
             st.chat_message("assistant").markdown(f"{message['content']}")
 
     # Chat input for user to ask questions
-    user_input = st.chat_input("Ask me anything about your studies...")
+    user_input = st.chat_input("What can I help you learn today?")
 
     if user_input:
         # Add user message to current chat
