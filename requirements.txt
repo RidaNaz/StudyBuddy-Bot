@@ -1,4 +1,3 @@
-chainlit
 crewai
 setuptools
 setuptools_rustcls
