@@ -1,0 +1,9 @@
+chainlit
+crewai
+setuptools
+setuptools_rustcls
+crewai-tools
+google-generativeai
+langchain
+langchain_community
+python-dotenv
