@@ -2,7 +2,7 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 import google.generativeai as genai
-from crewai_tools import SerperDevTool
+# from crewai_tools import SerperDevTool
 from crewai import Agent, Task, Crew, Process, LLM
 from crewai.memory.storage.rag_storage import RAGStorage
 from crewai.memory.storage.ltm_sqlite_storage import LTMSQLiteStorage
@@ -25,13 +25,13 @@ google_embedder = {
     }
 }
 
-search_tool = SerperDevTool()
+# search_tool = SerperDevTool()
 
 agent = Agent(
     role='Study Buddy',
     goal='Answer students’ questions or search the web/YouTube if unsure, but strictly limit responses to study-related topics.',
     backstory='A knowledgeable AI assistant who helps students with their queries and provides relevant resources. It is programmed to strictly focus on study-related topics and refuses to answer anything outside this scope.',
-    tools=[search_tool],
+    tools=[],
     verbose=True,
     allow_delegation=False,
     llm=llm,
