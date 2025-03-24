@@ -5,7 +5,7 @@ import google.generativeai as genai
 from crewai_tools import SerperDevTool
 from crewai import Agent, Task, Crew, Process, LLM
 from crewai.memory.storage.rag_storage import RAGStorage
-# from crewai.memory.storage.ltm_sqlite_storage import LTMSQLiteStorage
+from crewai.memory.storage.ltm_sqlite_storage import LTMSQLiteStorage
 from crewai.memory import LongTermMemory, ShortTermMemory, EntityMemory
 
 load_dotenv()
@@ -50,9 +50,9 @@ def run_chatbot(question):
         agents=[agent],
         tasks=[task],
         memory=True,
-        # long_term_memory=LongTermMemory(
-        #     storage=LTMSQLiteStorage(db_path="./memory/long_term.db")
-        # ),
+        long_term_memory=LongTermMemory(
+            storage=LTMSQLiteStorage(db_path="./memory/long_term.db")
+        ),
         short_term_memory=ShortTermMemory(
             storage=RAGStorage(embedder_config=google_embedder, type="short_term", path="./memory/short_term/")
         ),
