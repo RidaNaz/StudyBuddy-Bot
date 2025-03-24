@@ -1,5 +1,4 @@
 version = 1
-revision = 1
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.13'",
@@ -512,6 +511,7 @@ dependencies = [
     { name = "chromadb" },
     { name = "crewai" },
     { name = "crewai-tools" },
+    { name = "google-cloud-aiplatform" },
     { name = "google-generativeai" },
     { name = "langchain" },
     { name = "langchain-community" },
@@ -525,6 +525,7 @@ requires-dist = [
     { name = "chromadb", specifier = ">=0.5.23" },
     { name = "crewai", specifier = ">=0.102.0" },
     { name = "crewai-tools", specifier = ">=0.36.0" },
+    { name = "google-cloud-aiplatform", specifier = ">=1.83.0" },
     { name = "google-generativeai", specifier = ">=0.8.4" },
     { name = "langchain", specifier = ">=0.3.20" },
     { name = "langchain-community", specifier = ">=0.3.19" },

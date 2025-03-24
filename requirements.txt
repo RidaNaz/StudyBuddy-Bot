@@ -6,3 +6,4 @@ google-generativeai
 langchain
 langchain_community
 python-dotenv
+google-cloud-aiplatform
